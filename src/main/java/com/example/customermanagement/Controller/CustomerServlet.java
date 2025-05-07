@@ -65,7 +65,7 @@ public class CustomerServlet extends HttpServlet {
         Customer customer = this.customerService.findById(id);
         RequestDispatcher dispatcher;
         if (customer == null) {
-            dispatcher = request.getRequestDispatcher("error-404.jsp");
+                dispatcher = request.getRequestDispatcher("error-404.jsp");
         } else {
             customer.setName(name);
             customer.setEmail(email);
